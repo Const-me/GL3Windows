@@ -14,7 +14,7 @@ inline HRESULT getLastGl()
 	return -(int)( e );
 }
 
-// FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM) wrapper
+// FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM) wrapper, also supports OpenGL errors.
 __declspec( noinline ) CStringW ErrorMessage( HRESULT hr );
 
 // CString::Format, then append FormatMessage(hr), then call MessageBox.
