@@ -4,49 +4,137 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Window\GlWnd.h" />
-    <ClInclude Include="Utils\Assert.h" />
-    <ClInclude Include="Utils\MiscUtils.h" />
-    <ClInclude Include="Mesh\TriangleMesh.hpp" />
-    <ClInclude Include="Mesh\Vertex.hpp" />
-    <ClInclude Include="Mesh\SphereMesh.h" />
-    <ClInclude Include="Utils\dxtk\SimpleMath.h" />
-    <ClInclude Include="Shaders\Shader.h" />
-    <ClInclude Include="Main\MainWnd.h" />
-    <ClInclude Include="Texture\Texture.h" />
-    <ClInclude Include="Utils\glew\glew.h" />
-    <ClInclude Include="Utils\glew\wglew.h" />
-    <ClInclude Include="Main\MouseProcessor.h" />
-    <ClInclude Include="Shaders\NoiseProgram.h" />
-    <ClInclude Include="Texture\decompress.h" />
+    <ClInclude Include="Window\GlWnd.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Assert.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\MiscUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\dxtk\SimpleMath.h">
+      <Filter>Utils\dxtk</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glew\glew.h">
+      <Filter>Utils\glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glew\wglew.h">
+      <Filter>Utils\glew</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\decompress.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\Texture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MainWnd.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MouseProcessor.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\SphereMesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\TriangleMesh.hpp">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\Vertex.hpp">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\NoiseProgram.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\Shader.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GlNoise.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Window\GlWnd.cpp" />
-    <ClCompile Include="Window\GlWnd.WM.cpp" />
-    <ClCompile Include="Utils\MiscUtils.cpp" />
-    <ClCompile Include="Mesh\SphereMesh.cpp" />
-    <ClCompile Include="Utils\dxtk\SimpleMath.cpp" />
-    <ClCompile Include="Shaders\Shader.cpp" />
-    <ClCompile Include="Main\MainWnd.cpp" />
-    <ClCompile Include="Texture\Texture.cpp" />
-    <ClCompile Include="Utils\glew\glew.c" />
-    <ClCompile Include="Main\MouseProcessor.cpp" />
-    <ClCompile Include="Shaders\NoiseProgram.cpp" />
-    <ClCompile Include="Texture\decompress.cpp" />
+    <ClCompile Include="Window\GlWnd.WM.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\GlWnd.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\MiscUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\dxtk\SimpleMath.cpp">
+      <Filter>Utils\dxtk</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\glew\glew.c">
+      <Filter>Utils\glew</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\decompress.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\Texture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MainWnd.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MouseProcessor.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\SphereMesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\NoiseProgram.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\Shader.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="GlNoise.ico" />
     <Image Include="small.ico" />
-    <Image Include="Texture\gradient.DDS" />
+    <Image Include="Texture\gradient.DDS">
+      <Filter>Texture</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GlNoise.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Utils\dxtk\SimpleMath.inl" />
-    <None Include="Shaders\noise.frag" />
-    <None Include="Shaders\noise.vert" />
+    <None Include="Utils\dxtk\SimpleMath.inl">
+      <Filter>Utils\dxtk</Filter>
+    </None>
+    <None Include="Shaders\noise.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\noise.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{d5b1e771-b9e8-4e70-a232-0a603b13e8d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{2d425e94-5dc4-4f29-8ff5-228709a04ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\dxtk">
+      <UniqueIdentifier>{0eef87bd-b821-4fa2-972e-19aa35435afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\glew">
+      <UniqueIdentifier>{b23e5410-96fb-4196-9db4-efe7e9f85306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{b5e6b752-2f2a-40ea-863d-1b1f29d41add}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{a57572af-276b-498f-880d-33eab49be8df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{4c4f0b4b-4de1-4169-bca9-8ed241750426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{5a5a2dc2-0620-498c-9c86-13f6f3aedd50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
