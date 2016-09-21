@@ -1,0 +1,11 @@
+.vs/
+GlNoise.VC.db
+GlNoise.VC.VC.opendb
+ipch/
+GlNoise/Win32/
+Win32/
+*.vspx
+*.psess
+*.aps
+GlNoise/x64/
+x64/

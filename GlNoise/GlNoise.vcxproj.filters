@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Window\GlWnd.h" />
+    <ClInclude Include="Utils\Assert.h" />
+    <ClInclude Include="Utils\MiscUtils.h" />
+    <ClInclude Include="Mesh\TriangleMesh.hpp" />
+    <ClInclude Include="Mesh\Vertex.hpp" />
+    <ClInclude Include="Mesh\SphereMesh.h" />
+    <ClInclude Include="Utils\dxtk\SimpleMath.h" />
+    <ClInclude Include="Shaders\Shader.h" />
+    <ClInclude Include="Main\MainWnd.h" />
+    <ClInclude Include="Texture\Texture.h" />
+    <ClInclude Include="Utils\glew\glew.h" />
+    <ClInclude Include="Utils\glew\wglew.h" />
+    <ClInclude Include="Main\MouseProcessor.h" />
+    <ClInclude Include="Shaders\NoiseProgram.h" />
+    <ClInclude Include="Texture\decompress.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GlNoise.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Window\GlWnd.cpp" />
+    <ClCompile Include="Window\GlWnd.WM.cpp" />
+    <ClCompile Include="Utils\MiscUtils.cpp" />
+    <ClCompile Include="Mesh\SphereMesh.cpp" />
+    <ClCompile Include="Utils\dxtk\SimpleMath.cpp" />
+    <ClCompile Include="Shaders\Shader.cpp" />
+    <ClCompile Include="Main\MainWnd.cpp" />
+    <ClCompile Include="Texture\Texture.cpp" />
+    <ClCompile Include="Utils\glew\glew.c" />
+    <ClCompile Include="Main\MouseProcessor.cpp" />
+    <ClCompile Include="Shaders\NoiseProgram.cpp" />
+    <ClCompile Include="Texture\decompress.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GlNoise.ico" />
+    <Image Include="small.ico" />
+    <Image Include="Texture\gradient.DDS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GlNoise.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Utils\dxtk\SimpleMath.inl" />
+    <None Include="Shaders\noise.frag" />
+    <None Include="Shaders\noise.vert" />
+  </ItemGroup>
+</Project>
