@@ -28,6 +28,7 @@ HRESULT CNoiseProgram::initialize()
 	glGetProgramiv( m_prog, GL_LINK_STATUS, &status );
 	if( status != 1 )
 	{
+		// Shader program link failed, print fail reason to the debug output.
 		GLint maxLength = 0;
 		glGetProgramiv( m_prog, GL_INFO_LOG_LENGTH, &maxLength );
 

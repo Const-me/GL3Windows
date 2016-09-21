@@ -18,6 +18,7 @@ HRESULT CShader::load( int idResource, GLenum shaderType )
 	glGetShaderiv( shader, GL_COMPILE_STATUS, &isCompiled );
 	if( isCompiled == GL_FALSE )
 	{
+		// Shader compilation failed, print fail reason to the debug output.
 		GLint maxLength = 0;
 		glGetShaderiv( shader, GL_INFO_LOG_LENGTH, &maxLength );
 
