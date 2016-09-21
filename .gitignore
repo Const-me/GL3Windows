@@ -9,3 +9,4 @@ Win32/
 *.aps
 GlNoise/x64/
 x64/
+*.user
