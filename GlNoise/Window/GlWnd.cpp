@@ -97,7 +97,7 @@ HRESULT CGlWnd::reportInitializationError( bool lastWin32, LPCTSTR pszFormat, ..
 	HRESULT hr = E_FAIL;
 	if( lastWin32 )
 	{
-		hr = GetLastHr();
+		hr = getLastHr();
 		msg.Append( L"\r\n" );
 		msg.Append( ErrorMessage( hr ) );
 	}
@@ -115,11 +115,11 @@ HRESULT CGlWnd::toggleFullscreen()
 	{
 		// Restore style and placement
 		if( 0 == SetWindowLongPtr( GWL_EXSTYLE, m_savedExtStyle ) )
-			return GetLastHr();
+			return getLastHr();
 		if( 0 == SetWindowLongPtr( GWL_STYLE, m_savedStyle ) )
-			return GetLastHr();
+			return getLastHr();
 		if( !SetWindowPlacement( &m_savedPlacement ) )
-			return GetLastHr();
+			return getLastHr();
 
 		InvalidateRect( nullptr );
 
@@ -131,28 +131,28 @@ HRESULT CGlWnd::toggleFullscreen()
 		ZeroMemory( &m_savedPlacement, sizeof( m_savedPlacement ) );
 		m_savedPlacement.length = sizeof( WINDOWPLACEMENT );
 		if( !GetWindowPlacement( &m_savedPlacement ) )
-			return GetLastHr();
+			return getLastHr();
 
 		m_savedStyle = GetWindowLongPtr( GWL_STYLE );
 		if( 0 == m_savedStyle )
-			return GetLastHr();
+			return getLastHr();
 
 		m_savedExtStyle = GetWindowLongPtr( GWL_EXSTYLE );
 		if( 0 == m_savedExtStyle )
-			return GetLastHr();
+			return getLastHr();
 
 		// Find monitor rectangle
 		HMONITOR hm = MonitorFromWindow( m_hWnd, MONITOR_DEFAULTTOPRIMARY );
 		MONITORINFO mi = { 0 };
 		mi.cbSize = sizeof( MONITORINFO );
 		if( !GetMonitorInfo( hm, &mi ) )
-			return GetLastHr();
+			return getLastHr();
 
 		// Set style and placement
 		if( 0 == SetWindowLongPtr( GWL_STYLE, fullscreenStyle ) )
-			return GetLastHr();
+			return getLastHr();
 		if( 0 == SetWindowLongPtr( GWL_EXSTYLE, m_savedExtStyle | WS_EX_TOPMOST ) )
-			return GetLastHr();
+			return getLastHr();
 		// Set position
 		SetWindowPos( HWND_TOPMOST, &mi.rcMonitor, SWP_FRAMECHANGED | SWP_SHOWWINDOW );
 

@@ -65,11 +65,11 @@ HRESULT loadResource( LPCWSTR lpName, LPCWSTR lpType, std::pair<DWORD, const BYT
 {
 	HMODULE hm = ::GetModuleHandle( nullptr );
 	if( nullptr == hm )
-		CHECK( GetLastHr() );
+		CHECK( getLastHr() );
 
 	const HRSRC res = FindResource( hm, lpName, lpType );
 	if( NULL == res )
-		CHECK( GetLastHr() );
+		CHECK( getLastHr() );
 
 	const DWORD cb = SizeofResource( hm, res );
 	if( 0 == cb )

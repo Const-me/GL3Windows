@@ -2,7 +2,7 @@
 
 typedef unsigned __int64 QWORD;
 
-inline HRESULT GetLastHr() { return HRESULT_FROM_WIN32( GetLastError() ); }
+inline HRESULT getLastHr() { return HRESULT_FROM_WIN32( GetLastError() ); }
 
 inline HRESULT getLastGl()
 {

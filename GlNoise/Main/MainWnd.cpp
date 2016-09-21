@@ -18,7 +18,7 @@ HRESULT CMainWnd::create( int nCmdShow )
 {
 	HWND res = __super::Create( NULL, NULL, L"GlNoise demo" );
 	if( NULL == res )
-		return GetLastHr();
+		return getLastHr();
 
 	ShowWindow( nCmdShow );
 	return S_OK;
