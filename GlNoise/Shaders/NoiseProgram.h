@@ -25,7 +25,14 @@ public:
 
 	void destroy();
 
-	void setShaderParameters( const Matrix& worldMatrix, const Matrix& viewMatrix, const Matrix& projectionMatrix, Vector2 noiseXyScale, float noiseResultScale, float time ) const;
+	// Set the texture sampler constant
+	void setTexture( int nTextureUnit );
+
+	// Set word, view and projection matrices
+	void setTransforms( const Matrix& worldMatrix, const Matrix& viewMatrix, const Matrix& projectionMatrix ) const;
+
+	// Set noise-related shader constants
+	void setNoiseParameters( Vector2 noiseXyScale, float noiseResultScale, float time ) const;
 
 	void use() const
 	{

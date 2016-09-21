@@ -52,6 +52,7 @@ private:
 	Matrix world, view, proj;
 
 	// Noise-related things
+	static const int nTextureUnit = 0;
 	void resetParameters();
 	Vector2 noiseXyScale;
 	float noiseResultScale;

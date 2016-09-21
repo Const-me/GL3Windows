@@ -79,8 +79,9 @@ void CMainWnd::initScene( CSize viewportSize )
 	glEnable( GL_CULL_FACE );
 	glCullFace( GL_BACK );
 
-	m_tex.bind();
+	m_tex.bind( nTextureUnit );
 	m_prog.use();
+	m_prog.setTexture( nTextureUnit );
 }
 
 void CMainWnd::drawScene( float SecsElapsed )
@@ -89,7 +90,8 @@ void CMainWnd::drawScene( float SecsElapsed )
 	totalTime += ( SecsElapsed * timeScaleFactor );
 
 	// Update shader variables
-	m_prog.setShaderParameters( world, view, proj, noiseXyScale, noiseResultScale, float( totalTime ) );
+	m_prog.setTransforms( world, view, proj );
+	m_prog.setNoiseParameters( noiseXyScale, noiseResultScale, float( totalTime ) );
 
 	// Draw the mesh. All the data should be already on the GPU.
 	m_mesh.drawBuffers();

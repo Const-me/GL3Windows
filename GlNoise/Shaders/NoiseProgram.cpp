@@ -74,16 +74,25 @@ void CNoiseProgram::destroy()
 	m_vs.destroy();
 }
 
+void CNoiseProgram::setTexture( int nTextureUnit )
+{
+	glUniform1i( shaderTexture, nTextureUnit );
+}
+
+// Return pointer to the first element of the matrix
 static inline const float* ptr( const Matrix& m )
 {
 	return &m.m[ 0 ][ 0 ];
 }
 
-void CNoiseProgram::setShaderParameters( const Matrix& worldMatrix, const Matrix& viewMatrix, const Matrix& projectionMatrix, Vector2 noiseXyScale, float noiseResultScale, float time ) const
+void CNoiseProgram::setTransforms( const Matrix& worldMatrix, const Matrix& viewMatrix, const Matrix& projectionMatrix ) const
 {
 	glUniformMatrix4fv( world, 1, false, ptr( worldMatrix ) );
 	glUniformMatrix4fv( view, 1, false, ptr( viewMatrix ) );
 	glUniformMatrix4fv( proj, 1, false, ptr( projectionMatrix ) );
-	glUniform1i( shaderTexture, 0 );
+}
+
+void CNoiseProgram::setNoiseParameters( Vector2 noiseXyScale, float noiseResultScale, float time ) const
+{
 	glUniform4f( noiseParameters, noiseXyScale.x, noiseXyScale.y, noiseResultScale, time );
 }

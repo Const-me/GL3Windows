@@ -18,8 +18,10 @@ public:
 	// Load a compressed DDS texture, from resource to GPU
 	HRESULT loadCompressedDdsResource( int idTexture, UINT iResourceName, LPCTSTR resourceType );
 
-	void bind() const
+	// Bind to the specified texture unit
+	void bind( int nTextureUnit ) const
 	{
+		glActiveTexture( GL_TEXTURE0 + nTextureUnit );
 		glBindTexture( GL_TEXTURE_2D, m_textureID );
 	}
 
